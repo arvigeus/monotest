@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.lib.json",
+  "files": ["../../typings.d.ts"],
+  "include": ["src", "types", "test"],
+  "exclude": ["node_modules", "dist", "__tests__", "**/*.test*", "**/*.spec*"],
+  "compilerOptions": {
+    "rootDir": "./",
+    "baseUrl": "./src"
+  }
+}

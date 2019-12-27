@@ -1,0 +1,179 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start apps/web",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/apps/web/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "npm: start"
+    },
+    {
+      "name": "Start apps/web (Attach)",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceRoot}/apps/web/src",
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${webRoot}/*"
+      },
+      "preLaunchTask": "npm: start"
+    },
+    {
+      "name": "Debug apps/web",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",
+      "args": [
+        "test",
+        "--runInBand",
+        "--no-cache",
+        "--watchAll=false",
+        "--passWithNoTests"
+      ],
+      "cwd": "${workspaceRoot}/apps/web",
+      "protocol": "inspector",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": { "CI": "true" },
+      "disableOptimisticBPs": true
+    },
+    {
+      "name": "Debug packages/api",
+      "type": "node",
+      "request": "launch",
+      "address": "localhost",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/lerna",
+      "runtimeArgs": [
+        "exec",
+        "--scope",
+        "@react-modern-state-management/api",
+        "--",
+        "node"
+      ],
+      "args": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "--no-cache",
+        "--passWithNoTests",
+        "packages/api"
+      ]
+    },
+    {
+      "name": "Debug packages/auth",
+      "type": "node",
+      "request": "launch",
+      "address": "localhost",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/lerna",
+      "runtimeArgs": [
+        "exec",
+        "--scope",
+        "@react-modern-state-management/auth",
+        "--",
+        "node"
+      ],
+      "args": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "--no-cache",
+        "--passWithNoTests",
+        "packages/auth"
+      ]
+    },
+    {
+      "name": "Debug packages/schema",
+      "type": "node",
+      "request": "launch",
+      "address": "localhost",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/lerna",
+      "runtimeArgs": [
+        "exec",
+        "--scope",
+        "@react-modern-state-management/schema",
+        "--",
+        "node"
+      ],
+      "args": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "--no-cache",
+        "--passWithNoTests",
+        "packages/schema"
+      ]
+    },
+    {
+      "name": "Debug packages/types",
+      "type": "node",
+      "request": "launch",
+      "address": "localhost",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/lerna",
+      "runtimeArgs": [
+        "exec",
+        "--scope",
+        "@react-modern-state-management/types",
+        "--",
+        "node"
+      ],
+      "args": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "--no-cache",
+        "--passWithNoTests",
+        "packages/types"
+      ]
+    },
+    {
+      "name": "Debug packages/ui",
+      "type": "node",
+      "request": "launch",
+      "address": "localhost",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/lerna",
+      "runtimeArgs": [
+        "exec",
+        "--scope",
+        "@react-modern-state-management/ui",
+        "--",
+        "node"
+      ],
+      "args": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "--no-cache",
+        "--passWithNoTests",
+        "packages/ui"
+      ]
+    },
+    {
+      "name": "Debug packages/utils",
+      "type": "node",
+      "request": "launch",
+      "address": "localhost",
+      "protocol": "inspector",
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/lerna",
+      "runtimeArgs": [
+        "exec",
+        "--scope",
+        "@react-modern-state-management/utils",
+        "--",
+        "node"
+      ],
+      "args": [
+        "${workspaceRoot}/node_modules/jest/bin/jest.js",
+        "--runInBand",
+        "--no-cache",
+        "--passWithNoTests",
+        "packages/utils"
+      ]
+    }
+  ]
+}

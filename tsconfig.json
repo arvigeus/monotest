@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.lib.json",
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "__tests__",
+    "**/*.test*",
+    "**/*.spec*"
+  ],
+  "files": [],
+  "references": [{ "path": "packages/ui" }]
+}
