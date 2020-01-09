@@ -1,16 +1,13 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "files.exclude": {
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/.cache": true,
-    "**/.vscode": true,
-    "**/package-lock.json": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "jest.pathToJest": ""
+  "files.exclude": {
+    "**/.vscode": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/yarn.lock": true
+  }
 }

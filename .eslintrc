@@ -1,0 +1,29 @@
+// For a detailed explanation regarding each configuration property, visit:
+// https://eslint.org/docs/user-guide/configuring
+
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    // 'plugin:react-hooks/recommended', // FIXME: https://github.com/facebook/react/issues/16872
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["react-hooks"],
+  "rules": {
+    // https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "@typescript-eslint/no-var-requires": "off"
+  }
+}

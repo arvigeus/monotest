@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import Thing from "./components/Thing";
+import Thing from "components/Thing";
 
 describe("it", () => {
   it("renders without crashing", () => {

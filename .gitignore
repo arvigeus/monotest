@@ -31,11 +31,10 @@ build/Release
 node_modules/
 jspm_packages/
 
-# Optional npm cache directory
+# Cache
 .npm
-
-# Optional eslint cache
 .eslintcache
+.next
 
 # Optional REPL history
 .node_repl_history
